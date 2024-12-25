@@ -1,5 +1,12 @@
 {
-    "rewrites":  [
-      {"source": "/(.*)", "destination": "/"}
-    ]
-  }
+  "routes": [
+    {
+      "src": "/splat/main.js",
+      "dest": "/splat/main.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
