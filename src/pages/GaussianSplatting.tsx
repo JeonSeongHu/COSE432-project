@@ -391,6 +391,12 @@ const GaussianSplatting: React.FC<GaussianSplattingProps> = ({
           <button className={styles.closeButton} onClick={handleClose}>
             ✕
           </button>
+          <button 
+            className={styles.returnButton} 
+            onClick={() => navigate('/booking/section')}
+          >
+            돌아가기
+          </button>
         </div>
       </div>
 

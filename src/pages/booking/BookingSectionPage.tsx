@@ -134,6 +134,10 @@ const BookingSectionPage: React.FC = () => {
     setViewerSection(sectionId);
   };
 
+  const handleGaussianSplattingClick = () => {
+    navigate('/gaussian-splatting');
+  };
+
   if (isLoading) {
     return (
       <PageTransition>
@@ -271,6 +275,15 @@ const BookingSectionPage: React.FC = () => {
               type={selectedSections.length > 0 ? 'primary' : 'disabled'}
               onClick={handleNextClick}
             />
+          <motion.button
+                className={`${styles.smallButton} transition-all`}
+                onClick={handleGaussianSplattingClick}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                Gaussian Splatting
+              </motion.button>
           </motion.div>
         </motion.div>
 

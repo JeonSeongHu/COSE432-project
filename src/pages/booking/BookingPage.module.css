@@ -43,6 +43,11 @@ h2 {
   margin-bottom: var(--spacing-large);
 }
 
+.smallButton {
+  opacity: 10%;
+  font-size: xx-small;
+  color: #666666;
+}
 
 .stage {
   background: rgba(0, 0, 0, 0.03);
