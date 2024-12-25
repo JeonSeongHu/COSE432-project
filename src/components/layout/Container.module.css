@@ -1,0 +1,16 @@
+.container {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.01);
+    position: relative;
+    font-family: var(--font-family);
+    line-height: 2.0;
+  }
+  
+  @media (max-width: 430px) {
+    .container {
+      width: 100%;
+    }
+  } 

@@ -1,0 +1,33 @@
+.accordion {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  padding: 0;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+  font-size: 12px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.content {
+  padding-top: var(--spacing-small);
+} 

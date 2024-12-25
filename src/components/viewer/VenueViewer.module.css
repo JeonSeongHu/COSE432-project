@@ -1,0 +1,222 @@
+.viewerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xlarge);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 120px;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+.headerContent {
+  flex: 1;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.instructions {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.closeButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  border: none;
+  color: #666;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #eee;
+  transform: scale(1.1);
+}
+
+.viewButton {
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.viewButton:hover {
+  background-color: #eee;
+}
+
+.viewButton.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.viewerContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xlarge);
+}
+
+.canvasContainer {
+  flex: 1;
+  max-height: 60vh;
+  position: relative;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.seatMap {
+  height: 200px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 ;
+}
+
+.firstFloorSections {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 120px;
+}
+
+.floorSections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.sectionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mapSection {
+  padding: 10px 20px;
+  border: 1px solid #eee;
+  background: white;
+  color: #666;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.leftSection, .rightSection {
+  width: 120px;
+}
+
+.mapSection:hover {
+  background: #f5f5f5;
+}
+
+.mapSection.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.mapSection.selected {
+  background: #fff5d6;
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.wishButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: white;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.wishButton:hover {
+  background: #fff5d6;
+  border-color: #ffd700;
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.wishButton.selected {
+  background: #fff5d6;
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.stage {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  height: 40px;
+  background: #d4d4d4;
+  color: #2f2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border: 1px solid #eee;
+} 

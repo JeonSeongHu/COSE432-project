@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge);
+  border-radius: 16px;
+}
+
+.messageBox {
+  text-align: center;
+  padding: var(--spacing-xlarge);
+  overflow: hidden;
+}
+
+.mainText,
+.subText {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  word-break: keep-all;
+  line-height: 1.3;
+  transition: all var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.infoBox {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: var(--spacing-small);
+  margin-top: var(--spacing-xxlarge);
+  margin-bottom: var(--spacing-xxlarge);
+}
+
+.waitingCount {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.timeLeft {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.seatList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: var(--spacing-xlarge);
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.seatItem {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  text-align: center;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.takenSeat {
+  background-color: #f1f3f5;
+  color: #999;
+}
+
+.waitingTimeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeBox {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.waitingTime {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 40px 2px rgba(79, 79, 79, 0.1);
+  color: #333;
+  padding: var(--spacing-xsmall);
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+  border-radius: 16px;
+  margin-right: var(--spacing-large);
+}
+
+.messageWrapper {
+  animation: fadeInUp var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.highlightCount {
+  color: var(--primary-color);
+  font-weight: bold;
+}

@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-small);
+    border-bottom: 1px solid #eee;
+    background-color: var(--background-color);
+  }
+  
+  .title {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    margin: 0 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .backButton, .likeButton {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #333;
+    font-size: var(--font-size-large);
+  }
+  
+  .likeButton:hover {
+    color: var(--primary-color);
+  }

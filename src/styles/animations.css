@@ -1,0 +1,156 @@
+/* Global Animation Variables */
+:root {
+  --animation-duration-fast: 0.2s;
+  --animation-duration-base: 0.3s;
+  --animation-duration-slow: 0.5s;
+  --animation-timing-function: ease-in-out;
+}
+
+/* Fade Animations */
+.fadeIn {
+  animation: fadeIn var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.fadeInUp {
+  animation: fadeInUp var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.fadeInDown {
+  animation: fadeInDown var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.fadeInLeft {
+  animation: fadeInLeft var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.fadeInRight {
+  animation: fadeInRight var(--animation-duration-base) var(--animation-timing-function);
+}
+
+/* Scale Animations */
+.scaleIn {
+  animation: scaleIn var(--animation-duration-base) var(--animation-timing-function);
+}
+
+/* Bounce Animation */
+.bounce {
+  animation: bounce 1s infinite var(--animation-timing-function);
+}
+
+/* Slide Animations */
+.slideDown {
+  animation: slideDown var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.slideUp {
+  animation: slideUp var(--animation-duration-base) var(--animation-timing-function);
+}
+
+/* Transition Classes */
+.transition-all {
+  transition: all var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.transition-transform {
+  transition: transform var(--animation-duration-base) var(--animation-timing-function);
+}
+
+.transition-opacity {
+  transition: opacity var(--animation-duration-base) var(--animation-timing-function);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

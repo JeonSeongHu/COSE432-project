@@ -1,0 +1,165 @@
+.page-container {
+    display: flex;
+    gap: var(--spacing-large);
+    padding: var(--spacing-large);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .concert-container {
+    flex: 1;
+    min-width: 0;
+    border-radius: 16px; 
+    box-shadow: 1px 4px 99px 22px rgba(65, 65, 65, 0.07); 
+    padding: var(--spacing-large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+  }
+  
+  .concert-image {
+    flex-shrink: 0;
+    width: 300px;
+    position: sticky;
+    top: calc(var(--spacing-small));
+    height: fit-content;
+  }
+  
+  .concert-image img {
+    width: 100%;
+    border-radius: 16px;
+    padding: var(--spacing-small);
+  }
+  
+  .concert-header {
+    margin-bottom: var(--spacing-medium);
+  }
+  
+  .concert-header h1 {
+    font-size: var(--font-size-large);
+    line-height: 1.5;
+  }
+  
+  .concert-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-large);
+    border-radius: 16px; 
+  }
+  
+  .concert-header span {
+    width: 100%;
+    color: #ff4b4b;
+    font-weight: bold;
+    font-size: var(--font-size-small);
+  }
+  
+  .concert-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    position: sticky;
+    top: calc(var(--spacing-large) + 60px);
+    padding: var(--spacing-medium);
+    border-radius: 16px;
+  }
+  
+  .concert-detail p {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin: 0;
+    color: var(--text-color);
+    font-size: var(--font-size-smedium);
+    font-weight: 500;
+  }
+  
+  .concert-detail-tags-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-small);
+    align-items: center;
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .concert-detail-tag {
+    display: inline-block;
+    background-color: #e2e0e0;
+    padding: 0px 12px;
+    border-radius: 20px;
+    margin-right: 8px;
+  }
+  
+  .concert-detail-tag:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 480px) {
+    .concert-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-small);
+    }
+    
+    .concert-info p {
+      width: 100%;
+    }
+  }
+
+
+  
+  .concert-notice {
+    background-color: var(--background-color);
+    padding: var(--spacing-small);
+    border-radius: 8px;
+    margin-top: var(--spacing-small);
+  }
+
+
+  .concert-notice h3 {
+    font-size: var(--font-size-medium);  
+    padding: var(--spacing-small);
+  }
+  
+  .concert-notice ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+
+  
+  .concert-notice li {
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .concert-notice li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--black-color);
+  }
+  
+  .booking-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+  } 
+
+  .concert-container :global(.accordion-wrapper) {
+    margin-bottom: 16px;
+  }
+
+  /* 마지막 아코디언은 마진 제거 */
+  .concert-container :global(.accordion-wrapper):last-child {
+    margin-bottom: 0;
+  }
