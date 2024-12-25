@@ -147,7 +147,7 @@ const WaitingPage: React.FC = () => {
   // -------------------------------------------------------
   // 7) messageIndex: 좌석 선점 상태에 따른 메시지 구분
   // -------------------------------------------------------
-  const messageIndex = useMemo(() => {
+  useMemo(() => {
     const takenSeats = selectedSeats.filter((seat) => seat.status === 'taken');
     if (takenSeats.length === selectedSeats.length && selectedSeats.length > 0) {
       return 2;
