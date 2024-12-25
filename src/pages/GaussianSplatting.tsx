@@ -173,12 +173,11 @@ const GaussianSplatting: React.FC<GaussianSplattingProps> = ({
       console.log('Initializing main script...');
       
       // cameras 배열 초기화는 main.js에서 하도록 제거
-      const baseUrl = import.meta.env.PUBLIC_URL || '';
-      window.url = `${baseUrl}/splat/model.splat`;
+      window.url = `https://raw.githack.com/antimatter15/splat/refs/heads/main/model.splat`;
       console.log('Splat URL set:', window.url);
 
       const script = document.createElement('script');
-      script.src = `${baseUrl}/splat/main.js`; // Base URL에 맞춰 경로 설정
+      script.src = `https://raw.githack.com/antimatter15/splat/refs/heads/main/main.js`;
       script.type = 'text/javascript';
 
       
