@@ -38,6 +38,7 @@ const App: React.FC = () => (
           <Route path="/booking/manual/seat" element={<ManualBookingSeatPage />} />
           <Route path="/history" element={<BookingHistoryPage />} />
           <Route path="/gaussian-splatting" element={<GaussianSplatting />} />
+          <Route path="/*" element={<ConcertPage />} />
         </Routes>
       </Container>
     </Router>
