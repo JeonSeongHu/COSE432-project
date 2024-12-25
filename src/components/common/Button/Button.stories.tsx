@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from './Button';
 
 export default {
@@ -6,5 +5,11 @@ export default {
   component: Button,
 };
 
-export const Primary = () => <Button BoldText="예매 정보 입력하러 가기" SubText='addsd' type="primary" onClick={() => alert('Primary Clicked!')} />;
+export const Primary = {
+  args: {
+    BoldText: '예매 정보 입력하러 가기',
+    SubText: 'addsd',
+    type: 'primary',
+  },
+};
 export const Disabled = () => <Button BoldText="Disabled Button" type="disabled" onClick={() => {}} />;

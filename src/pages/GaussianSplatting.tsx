@@ -117,10 +117,6 @@ const cross = (a: number[], b: number[]): number[] => {
   ];
 };
 
-const dot = (a: number[], b: number[]): number => {
-  return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
-};
-
 const GaussianSplatting: React.FC<GaussianSplattingProps> = ({
   onClose,
   onSectionSelect: externalOnSectionSelect,
@@ -191,11 +187,16 @@ const GaussianSplatting: React.FC<GaussianSplattingProps> = ({
         window.updateViewMatrix = (matrix: number[]) => {
           window.viewMatrix = matrix;
           // 뷰 매트릭스 직접 적용
-          if (window.gl && window.u_view) {
-            window.gl.uniformMatrix4fv(window.u_view, false, matrix);
-            window.gl.clear(window.gl.COLOR_BUFFER_BIT);
-            if (window.vertexCount > 0) {
-              window.gl.drawArraysInstanced(window.gl.TRIANGLE_FAN, 0, 4, window.vertexCount);
+          if ((window as any).gl && (window as any).u_view) {
+            (window as any).gl.uniformMatrix4fv((window as any).u_view, false, matrix);
+            (window as any).gl?.clear((window as any).gl?.COLOR_BUFFER_BIT);
+            if ((window as any).vertexCount > 0) {
+              (window as any).gl.drawArraysInstanced(
+                (window as any).gl.TRIANGLE_FAN,
+                0,
+                4,
+                (window as any).vertexCount
+              );
             }
           }
         };

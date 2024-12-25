@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from '../../components/common/Button/Button';
 import styles from './BookingPage.module.css';
 import { useSelector, useDispatch } from 'react-redux';
@@ -9,7 +9,6 @@ import type { RootState } from '../../store/store';
 import PageTransition from '../../components/layout/PageTransition';
 import { motion } from 'framer-motion';
 import { fetchSectionSeats, fetchAvailableSections } from '../../services/seatService';
-import { Seat } from '../../types/booking';
 
 interface ExitConfirmPopupProps {
   onCancel: () => void;
@@ -34,7 +33,6 @@ const ExitConfirmPopup: React.FC<ExitConfirmPopupProps> = ({ onCancel, onConfirm
 
 const BookingSeatPage: React.FC = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const dispatch = useDispatch();
   const { selectedSeats, currentSection, sectionSeats } = useSelector(
     (state: RootState) => state.booking
@@ -44,7 +42,6 @@ const BookingSeatPage: React.FC = () => {
   const [availableSections, setAvailableSections] = useState<string[]>([]);
   const [showOverview, setShowOverview] = useState(false);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
-  const [elapsedTime, setElapsedTime] = useState(0);
   const isPrepaid = useSelector((state: RootState) => state.booking.isPrepaid);
 
   // 컴포넌트 마운트 시 선택 상태 초기화
@@ -186,7 +183,7 @@ const BookingSeatPage: React.FC = () => {
     }
 
     if (isPrepaid) {
-      // 사전 결제��� 완료된 경우 성공 페이지로 이동
+      // 사전 결제가 완료된 경우 성공 페이지로 이동
       navigate('/booking/success', { 
         state: { 
           seats: selectedSeats,

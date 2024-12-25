@@ -1,12 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import React, { useState, useEffect } from 'react';
+import { Canvas, useThree } from '@react-three/fiber';
 import { 
   OrbitControls, 
   PerspectiveCamera, 
   Environment, 
-  useGLTF, 
-  Html,
-  Text
+  Html
 } from '@react-three/drei';
 import { 
   EffectComposer,
@@ -339,7 +337,7 @@ const VenueViewer: React.FC<VenueViewerProps> = ({
             {isEgocentric ? (
               '2D 맵에서 다른 구역을 선택하여 시야를 확인할 수 있습니다'
             ) : (
-              '마우스로 드래그하여 시점을 변경하고, 스크롤하여 확대/축소할 수 있습니다'
+              '마우스 드래그하여 시점을 변경하고, 스크롤하여 확대/축소할 수 있습니다'
             )}
           </p>
         </div>

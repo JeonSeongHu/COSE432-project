@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { setPaymentMethod, setIsPrepaid, addBookedTicket, clearBookingSelection } from '../../store/bookingSlice';
+import { setPaymentMethod, setIsPrepaid, addBookedTicket } from '../../store/bookingSlice';
 import type { RootState } from '../../store/store';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../components/common/Button/Button';
@@ -20,7 +20,6 @@ const BookingPaymentPage: React.FC = () => {
     selectedSeats,
     selectedDate,
     selectedTime,
-    attendees,
   } = useSelector((state: RootState) => state.booking);
   const [showAgreement, setShowAgreement] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -81,7 +80,7 @@ const BookingPaymentPage: React.FC = () => {
 
   const handleLaterPayment = () => {
     dispatch(setIsPrepaid(false));
-    navigate('/booking/history');
+    navigate('/booking/complete');
   };
 
   return (

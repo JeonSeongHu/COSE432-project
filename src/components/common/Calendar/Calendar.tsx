@@ -21,7 +21,6 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateSelect, availab
     const daysInMonth = new Date(2024, 11, 0).getDate();
 
     for (let i = 1; i <= daysInMonth; i++) {
-      const currentDate = new Date(2024, 10, i);
       const dateInfo = availableDates.find(d => d.date.getDate() === i);
       const isAvailable = !!dateInfo;
       const isSelected = selectedDate?.date.getDate() === i;

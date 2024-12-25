@@ -1,9 +1,5 @@
 import { Seat } from '../types/booking';
 
-interface SectionSeats {
-  [key: string]: Seat[];
-}
-
 // 실제 환경에서는 이 함수가 서버에서 데이터를 가져올 것입니다
 export const fetchSectionSeats = async (sectionId: string): Promise<Seat[]> => {
   // TODO: 실제 API 호출로 대체

@@ -1,12 +1,11 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../store/store';
 import styles from './BookingCompletePage.module.css';
 
 const BookingCompletePage: React.FC = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const bookingState = useSelector((state: RootState) => state.booking);
   
   const BOOKING_INFO = [
@@ -43,6 +42,14 @@ const BookingCompletePage: React.FC = () => {
         ? bookingState.attendees.map(attendee => attendee.name).join(', ')
         : '관람자 정보를 입력해주세요',
       path: '/booking/info'
+    },
+    {
+      id: 'selectedSeats',
+      label: '희망 좌석',
+      value: bookingState.selectedSeats.length > 0
+        ? bookingState.selectedSeats.map(seat => `${seat.section} ${seat.row}열 ${seat.number}번`).join(', ')
+        : '좌석을 선택해주세요',
+      path: '/booking/seat'
     },
     {
       id: 'payment',

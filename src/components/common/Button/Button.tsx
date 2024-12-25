@@ -21,5 +21,5 @@ const Button: React.FC<ButtonProps> = ({ BoldText, SubText, type = 'primary', on
     </button>
   );
 };
-
 export default Button;
+

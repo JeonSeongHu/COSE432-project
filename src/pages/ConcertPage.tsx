@@ -39,7 +39,7 @@ const ConcertPage: React.FC = () => {
         <div className={styles['concert-info']}>
           <div className={styles['concert-detail']}>
             <div className={styles['concert-header']}>
-              <span>🔥 122명이 함께 기다리고 있어요.</span>
+              <span>🔥 122명이 함께 기다��고 있어요.</span>
               <h1>2024 AKMU 10th ANNIVERSARY CONCERT [1OVE]</h1>
             </div>
             <div className={styles['concert-detail-tags-container']}>
@@ -98,7 +98,9 @@ const ConcertPage: React.FC = () => {
                 ? "" 
                 : "예매 정보를 먼저 입력하고 빠르게 티켓팅하세요!"} 
             type={attendees.length > 0 ? 'secondary' : 'primary'}
-            onClick={() => navigate('/booking/calendar')} 
+            onClick={() => navigate(attendees.length > 0
+                                    ? '/booking/complete'
+                                    : '/booking/calendar')} 
           />
           <Button 
             BoldText="예매하기" 

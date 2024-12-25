@@ -8,13 +8,6 @@ import Button from '../../components/common/Button/Button';
 import PageTransition from '../../components/layout/PageTransition';
 import styles from './BookingPage.module.css';
 import { fetchSectionSeats } from '../../services/seatService';
-import { Seat } from '../../types/booking';
-
-interface SectionInfo {
-  id: string;
-  name: string;
-  isAvailable: boolean;
-}
 
 const BookingSeatPage: React.FC = () => {
   const navigate = useNavigate();

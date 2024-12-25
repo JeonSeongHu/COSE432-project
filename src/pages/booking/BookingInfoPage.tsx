@@ -21,7 +21,6 @@ const BookingInfoPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
-  const guestCount = useSelector((state: RootState) => state.booking.guestCount);
   const storedAttendees = useSelector((state: RootState) => state.booking.attendees);
 
   // Initialize attendees with stored data if available

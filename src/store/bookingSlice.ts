@@ -108,7 +108,7 @@ export const bookingSlice = createSlice({
     },
 
     // 초기화
-    resetBooking: (state) => {
+    resetBooking: (_state) => {
       return initialState;
     },
 
