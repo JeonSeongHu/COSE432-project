@@ -12,7 +12,6 @@
 - Redux Toolkit
 - Framer Motion
 
----
 
 # 설치 및 실행 가이드
 
@@ -21,7 +20,6 @@
 - Node.js 18.0.0 이상
 - npm 또는 yarn
 
----
 
 ## WSL 환경
 
@@ -77,7 +75,6 @@ yarn test
 
 > **WSL 환경에서 확인됨**: 위 작업들은 WSL2(Windows Subsystem for Linux) 환경에서 정상적으로 작동함이 확인되었습니다.
 
----
 
 ## macOS 환경
 
@@ -132,8 +129,6 @@ yarn test
 ```
 
 > **주의**: macOS 환경에서 테스트되지 않았으므로 사용 시 주의가 필요합니다.
-
----
 
 ## Windows 환경
 
